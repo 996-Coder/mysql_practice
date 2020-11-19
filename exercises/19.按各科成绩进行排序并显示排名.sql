@@ -1,0 +1,1 @@
+select t.* , px = (select count(1) from SC where CID = t.CID and score > t.score) + 1 from sc t order by t.cid , px
